@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.dhq.mapper.NewsMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.dhq.entity.News">
+        <id column="ID" property="id" />
+        <result column="TITLE" property="title" />
+        <result column="REMARK" property="remark" />
+        <result column="CREATEUSER" property="createuser" />
+        <result column="SIGNATURE" property="signature" />
+    </resultMap>
+
+    <!-- 通用查询结果列 -->
+    <sql id="Base_Column_List">
+        ID, TITLE, REMARK, CREATEUSER, SIGNATURE
+    </sql>
+
+</mapper>
