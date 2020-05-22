@@ -23,10 +23,10 @@ import java.util.UUID;
 
 /**
  * <p>
- *  前端控制器
+ * 前端控制器
  * </p>
  *
- * @author dhq
+ * @author com.dhq
  * @since 2020-03-05
  */
 @RestController
@@ -39,8 +39,8 @@ public class NewsController {
     private JmsMessagingTemplate jmsMessagingTemplate;
 
     @GetMapping("/list")
-    public List<News> list(){
-        QueryWrapper<News> queryWrapper=new QueryWrapper<>();
+    public List<News> list() {
+        QueryWrapper<News> queryWrapper = new QueryWrapper<>();
         List<News> list = newsService.list(queryWrapper);
         return list;
     }
@@ -48,18 +48,18 @@ public class NewsController {
     @GetMapping("/add")
     public RestResult add() throws JMSException, JsonProcessingException {
         String uuid = UUID.randomUUID().toString().replaceAll("-", "");
-        News news = getNews(uuid);
+        News news = newsService.getNews(uuid);
         boolean b = newsService.save(news);
 
-        if(b) {
+        if (b) {
             ObjectMapper objectMapper = new ObjectMapper();
             String objectToJson = objectMapper.writeValueAsString(news);
             ActiveMQMapMessage message = new ActiveMQMapMessage();
             message.setObject("entity", objectToJson);
-            Destination destination = new ActiveMQTopic("activemq.news");
+            Destination destination = new ActiveMQTopic("default_activemq.news");
             jmsMessagingTemplate.convertAndSend(destination, message);
         }
-        return RestResult.warperMsgOk("新增成功",news);
+        return RestResult.warperMsgOk("新增成功", news);
     }
 
     //更新
@@ -69,22 +69,13 @@ public class NewsController {
         return RestResult.warperOk("保存成功");
     }
 
-    public News getNews(String uuid){
-        News news = new News();
-        news.setId(uuid);
-        news.setTitle("新冠肺炎情况通报");
-        news.setCreateuser("张三");
-        news.setRemark("尽快清除病毒");
-        news.setSignature("");
-        return news;
-    }
 
-    public Map<String ,String> mappingToMap(News news){
-        Map<String ,String> map=new HashMap<>();
-        map.put("id",news.getId());
-        map.put("title",news.getTitle());
-        map.put("createuser",news.getCreateuser());
-        map.put("remark",news.getRemark());
+    public Map<String, String> mappingToMap(News news) {
+        Map<String, String> map = new HashMap<>();
+        map.put("id", news.getId());
+        map.put("title", news.getTitle());
+        map.put("createuser", news.getCreateuser());
+        map.put("remark", news.getRemark());
         return map;
     }
 

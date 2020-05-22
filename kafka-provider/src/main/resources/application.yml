@@ -1,0 +1,20 @@
+server:
+  port: 2025
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/qr?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&useLegacyDatetimeCode=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  cloud:
+    config: false
+  kafka:
+    producer:
+      #指定消息key和消息体的编解码方式
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+      acks: 0
+    # 指定kafka 代理地址，可以多个
+    bootstrap-servers: localhost:9092

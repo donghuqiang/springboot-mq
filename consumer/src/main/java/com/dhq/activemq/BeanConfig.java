@@ -42,18 +42,18 @@ public class BeanConfig {
     }
 
     @Bean
-    public ConnectionFactory connectionFactory(){
+    public ConnectionFactory connectionFactory() {
         return new ActiveMQConnectionFactory(username, password, brokerUrl);
     }
 
     @Bean
-    public JmsMessagingTemplate jmsMessageTemplate(){
+    public JmsMessagingTemplate jmsMessageTemplate() {
         return new JmsMessagingTemplate(connectionFactory());
     }
 
     // 在Queue模式中，对消息的监听需要对containerFactory进行配置
     @Bean("queueConsumerListener")
-    public JmsListenerContainerFactory<?> queueJmsListenerContainerFactory(ConnectionFactory connectionFactory){
+    public JmsListenerContainerFactory<?> queueJmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         factory.setPubSubDomain(false);
@@ -62,7 +62,7 @@ public class BeanConfig {
 
     //在Topic模式中，对消息的监听需要对containerFactory进行配置
     @Bean("topicConsumerListener")
-    public JmsListenerContainerFactory<?> topicJmsListenerContainerFactory(ConnectionFactory connectionFactory){
+    public JmsListenerContainerFactory<?> topicJmsListenerContainerFactory(ConnectionFactory connectionFactory) {
         SimpleJmsListenerContainerFactory factory = new SimpleJmsListenerContainerFactory();
         factory.setConnectionFactory(connectionFactory);
         factory.setPubSubDomain(true);

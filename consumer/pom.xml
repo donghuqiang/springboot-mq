@@ -4,7 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.dhq</groupId>
-        <artifactId>springboot-activemq</artifactId>
+        <artifactId>springboot-mq</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
 
@@ -21,6 +21,12 @@
         <dependency>
             <groupId>com.dhq</groupId>
             <artifactId>service</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.dhq</groupId>
+            <artifactId>common</artifactId>
             <version>1.0-SNAPSHOT</version>
         </dependency>
 

@@ -1,0 +1,29 @@
+server:
+  port: 2024
+
+spring:
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://localhost:3306/qr?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&useLegacyDatetimeCode=false
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+  cloud:
+    config: false
+  kafka:
+    # 指定kafka 代理地址，可以多个
+    bootstrap-servers: localhost:9092
+    topic:
+      Name: user #自定义topic名称
+      numPartitions: 2  #自定义分区
+      replicationFactor: 2 #自定义副本
+    consumer:
+      # 指定默认消费者group id
+      group-id: group.1
+      #earliest
+      auto-offset-reset: latest
+      enable-auto-commit: true
+      auto-commit-interval: 20000
+      # 指定消息key和消息体的编解码方式
+      key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+      value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
