@@ -67,15 +67,16 @@ public class RestResult implements Serializable {
         this.message = status.getMessage();
         this.data = data;
     }
+
     private RestResult(ResultStatus status, Object data, int recordsTotal, int draw, int start, int length) {
         this.code = status.getCode();
         this.message = status.getMessage();
         this.data = data;
-        this.recordsTotal=recordsTotal;
-        this.draw=draw;
-        this.start=start;
-        this.length=length;
-        this.recordsFiltered=recordsTotal;
+        this.recordsTotal = recordsTotal;
+        this.draw = draw;
+        this.start = start;
+        this.length = length;
+        this.recordsFiltered = recordsTotal;
     }
 
     public static RestResult ok() {
@@ -83,30 +84,33 @@ public class RestResult implements Serializable {
     }
 
     public static RestResult warperpageOk(Object data, int recordsTotal, int draw, int start, int length) {
-        return new RestResult(ResultStatus._200(),data,recordsTotal,draw,start,length);
+        return new RestResult(ResultStatus._200(), data, recordsTotal, draw, start, length);
     }
+
     public static RestResult warperOk(Object data) {
-        return new RestResult(ResultStatus._200(),data);
+        return new RestResult(ResultStatus._200(), data);
     }
-    public static RestResult warperMsgOk(String message, Object data){
-        return new RestResult(ResultStatus._200().getCode(),message,data);
+
+    public static RestResult warperMsgOk(String message, Object data) {
+        return new RestResult(ResultStatus._200().getCode(), message, data);
     }
+
     public static RestResult paramterError(BindingResult result) {
         List<FieldError> errors = result.getFieldErrors();
         Map error_map = new HashMap();
         for (FieldError e : errors) {
             error_map.put(e.getField().toString(), e.getDefaultMessage());
         }
-        return new RestResult(ResultStatus._1000(),error_map);
+        return new RestResult(ResultStatus._1000(), error_map);
     }
 
 
     public static RestResult error(String message) {
-        return new RestResult(ResultStatus._500(),message);
+        return new RestResult(ResultStatus._500(), message);
     }
 
-    public static RestResult error(int code , String message) {
-        return new RestResult(code,message);
+    public static RestResult error(int code, String message) {
+        return new RestResult(code, message);
     }
 
     public void setData(Object data) {

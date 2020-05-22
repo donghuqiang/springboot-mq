@@ -20,9 +20,9 @@ public class CodeGenerator {
 
         // 全局配置
         GlobalConfig gc = new GlobalConfig();
-        String modulDirName="/service";
+        String modulDirName = "/service";
         //获取当前模块根路径
-        String projectPath = System.getProperty("user.dir")+modulDirName;
+        String projectPath = System.getProperty("user.dir") + modulDirName;
 
 
         gc.setOutputDir(projectPath + "/src/main/java");
@@ -32,7 +32,7 @@ public class CodeGenerator {
         gc.setBaseResultMap(true);// XML ResultMap
         gc.setBaseColumnList(true);// XML columList
         gc.setOpen(false);
-        gc.setAuthor("dhq");
+        gc.setAuthor("com.dhq");
 
 
         // 自定义文件命名，注意 %s 会自动填充表实体属性！
@@ -46,7 +46,7 @@ public class CodeGenerator {
 
         // 数据源配置
         DataSourceConfig dsc = new DataSourceConfig();
-        dsc.setDbType( DbType.MYSQL);
+        dsc.setDbType(DbType.MYSQL);
         dsc.setDriverName("com.mysql.jdbc.Driver");
         dsc.setUrl("jdbc:mysql://localhost:3306/qr?allowMultiQueries=true&useSSL=false&serverTimezone=GMT%2B8&useLegacyDatetimeCode=false");
         dsc.setUsername("root");
@@ -56,8 +56,8 @@ public class CodeGenerator {
         // 包配置
         PackageConfig pc = new PackageConfig();
         pc.setParent("com.dhq");
-        pc.setController( "controller");
-        pc.setEntity( "entity" );
+        pc.setController("controller");
+        pc.setEntity("entity");
         //pc.setModuleName("test");
         mpg.setPackageInfo(pc);
 
@@ -84,14 +84,14 @@ public class CodeGenerator {
         // 策略配置
         StrategyConfig strategy = new StrategyConfig();
         //此处可以修改为您的表前缀
-        strategy.setTablePrefix(new String[] { "t_"});
+        strategy.setTablePrefix(new String[]{"t_"});
         // 表名生成策略
         strategy.setNaming(NamingStrategy.underline_to_camel);
         // 需要生成的表
-        strategy.setInclude(new String[] { "t_news" });
+        strategy.setInclude(new String[]{"t_news"});
         // 排除生成的表
         //strategy.setExclude(new String[]{"test"});
-        strategy.setEntityLombokModel( true );
+        strategy.setEntityLombokModel(true);
 
         mpg.setStrategy(strategy);
 

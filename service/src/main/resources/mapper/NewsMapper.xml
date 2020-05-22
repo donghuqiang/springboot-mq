@@ -4,11 +4,11 @@
 
     <!-- 通用查询映射结果 -->
     <resultMap id="BaseResultMap" type="com.dhq.entity.News">
-        <id column="ID" property="id" />
-        <result column="TITLE" property="title" />
-        <result column="REMARK" property="remark" />
-        <result column="CREATEUSER" property="createuser" />
-        <result column="SIGNATURE" property="signature" />
+        <id column="ID" property="id"/>
+        <result column="TITLE" property="title"/>
+        <result column="REMARK" property="remark"/>
+        <result column="CREATEUSER" property="createuser"/>
+        <result column="SIGNATURE" property="signature"/>
     </resultMap>
 
     <!-- 通用查询结果列 -->
