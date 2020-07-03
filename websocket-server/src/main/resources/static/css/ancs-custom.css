@@ -1,0 +1,571 @@
+html, body {
+    font-family: "LatoRegular", "Lucida Grande", Helvetica, sans-serif !important
+}
+
+/*
+ * Input Group
+ * general-forms.html
+ * ze
+ */
+.input-group-sm > .form-control, .input-group-sm > .input-group-addon, .input-group-sm > .input-group-btn > .btn {
+    font-size: 14px;
+    height: auto;
+}
+
+/*
+ * Input Groups--Checkbox & Radio
+ * general-forms.html
+ * ze
+ */
+.input-group-sm > .ancs-input-group-addon {
+    line-height: 0;
+}
+
+/*
+ * Input Fields
+ * general-forms.html
+ * ze
+ */
+.ancs-input-sm {
+    font-size: 14px;
+    padding: 5px 10px;
+}
+
+/*
+ * Select Fields
+ * general-forms.html
+ * ze
+ */
+select.ancs-input-sm {
+    height: 33px;
+    line-height: 33px;
+    padding-left: 5px;
+}
+
+select.ancs-input-sm option {
+    padding: 5px 8px;
+}
+
+/*
+ * Select2 Fields
+ * general-forms.html
+ * ze
+ */
+.ancs-select2-sm {
+    margin-top: 3px;
+}
+
+.ancs-select2-sm.select2-selection--single {
+    height: 30px;
+}
+
+.select2-container--default .ancs-select2-sm.select2-selection--single .select2-selection__arrow {
+    top: 4px;
+}
+
+.ancs-select2-multi-sm {
+    margin-top: 3px;
+}
+
+.ancs-select2-multi-sm .select2-search-choice-close {
+    top: 5px;
+}
+
+/*
+ * Ui Spinner
+ * general-forms.html
+ * ze
+ */
+.ancs-ui-spinner-input {
+    padding: 5px;
+}
+
+.ancs-ui-spinner-up {
+    background-position: 9px -42px;
+}
+
+/*
+ * Ui uploadify
+ * forms-widgets.html
+ * ze
+ */
+.ancs-uploadify {
+    background: #428bca;
+    border: 1px solid #357ebd;
+    color: #fff;
+    border-radius: 3px;
+}
+
+.uploadify:hover .ancs-uploadify {
+    background: #3071a9;
+    border: 1px solid #285e8e;
+}
+
+/*
+ * Ui dataTables
+ * 适用于bootstrap 3样式的表格
+ * ze
+ */
+.dt-bootstrap table.dataTable th.dt-left,
+.dt-bootstrap table.dataTable td.dt-left {
+    text-align: left;
+}
+
+.dt-bootstrap table.dataTable th.dt-center,
+.dt-bootstrap table.dataTable td.dt-center,
+.dt-bootstrap table.dataTable td.dataTables_empty {
+    text-align: center;
+}
+
+.dt-bootstrap table.dataTable th.dt-right,
+.dt-bootstrap table.dataTable td.dt-right {
+    text-align: right;
+}
+
+.dt-bootstrap table.dataTable th.dt-justify,
+.dt-bootstrap table.dataTable td.dt-justify {
+    text-align: justify;
+}
+
+.dt-bootstrap table.dataTable th.dt-nowrap,
+.dt-bootstrap table.dataTable td.dt-nowrap {
+    white-space: nowrap;
+}
+
+.dt-bootstrap table.dataTable thead th.dt-head-left,
+.dt-bootstrap table.dataTable thead td.dt-head-left,
+.dt-bootstrap table.dataTable tfoot th.dt-head-left,
+.dt-bootstrap table.dataTable tfoot td.dt-head-left {
+    text-align: left;
+}
+
+.dt-bootstrap table.dataTable thead th.dt-head-center,
+.dt-bootstrap table.dataTable thead td.dt-head-center,
+.dt-bootstrap table.dataTable tfoot th.dt-head-center,
+.dt-bootstrap table.dataTable tfoot td.dt-head-center {
+    text-align: center;
+}
+
+.dt-bootstrap table.dataTable thead th.dt-head-right,
+.dt-bootstrap table.dataTable thead td.dt-head-right,
+.dt-bootstrap table.dataTable tfoot th.dt-head-right,
+.dt-bootstrap table.dataTable tfoot td.dt-head-right {
+    text-align: right;
+}
+
+.dt-bootstrap table.dataTable thead th.dt-head-justify,
+.dt-bootstrap table.dataTable thead td.dt-head-justify,
+.dt-bootstrap table.dataTable tfoot th.dt-head-justify,
+.dt-bootstrap table.dataTable tfoot td.dt-head-justify {
+    text-align: justify;
+}
+
+.dt-bootstrap table.dataTable thead th.dt-head-nowrap,
+.dt-bootstrap table.dataTable thead td.dt-head-nowrap,
+.dt-bootstrap table.dataTable tfoot th.dt-head-nowrap,
+.dt-bootstrap table.dataTable tfoot td.dt-head-nowrap {
+    white-space: nowrap;
+}
+
+/*
+ * Ui dataTables
+ * column-render.html
+ * ze
+ */
+.ancs-extn {
+    border-radius: 5px;
+    color: #fff;
+    position: relative;
+    padding: 0 0 0 20px;
+}
+
+.ancs-extn-up {
+    background: red;
+}
+
+.ancs-extn-up > i {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 0;
+    left: 5px;
+    border: 5px solid transparent;
+    border-bottom: 5px solid #fff;
+}
+
+.ancs-extn-down {
+    background: green;
+}
+
+.ancs-extn-down > i {
+    width: 0;
+    height: 0;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    border: 5px solid transparent;
+    border-top: 5px solid #fff;
+}
+
+.ancs-extn-par {
+    background: gray;
+}
+
+/*
+ * Ui dataTables
+ * dom-toolbar.html
+ * ze
+ */
+table.dataTable > tbody > tr.ancs-selected > td {
+    background-color: #B0BED9;
+}
+
+/*
+ * Ui dataTables
+ * row-details.html
+ * ze
+ */
+.table-striped td.details-control {
+    background: url('../images/details_open.png') no-repeat center center;
+    cursor: pointer;
+}
+
+.table-striped tr.shown td.details-control {
+    background: url('../images/details_close.png') no-repeat center center;
+}
+
+/*
+ * panel background
+ * modals.html
+ * mag
+ */
+.ancs-panel {
+    background: #fff none repeat scroll 0 0;
+}
+
+/*
+ * progress style
+ * progress.html
+ * mag
+ */
+.ancs-progress {
+    -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, .1);
+    background-color: #f0f0f0;
+    height: 20px;
+}
+
+/*
+ * 不设置页面最小高度
+ * mag
+*/
+.mainpanel {
+    min-height: inherit !important;
+}
+
+/*
+ * 表格连接选中样式
+ * ze
+*/
+.jqx-grid-cell-selected-bootstrap .datagrid-link {
+    color: #fff;
+}
+
+/*
+ * 范例中panel顶部显示HTML链接按钮样式
+ * mag
+*/
+a.showHtmlBtn {
+    color: #fff;
+    padding: 4px 8px;
+    font-weight: normal;
+    font-size: 11px;
+}
+    /*
+     * dataTables checkbox样式
+     * mag
+    */
+    table.dataTable thead td.select-checkbox,
+    table.dataTable thead th.select-checkbox {
+        position: relative;
+    }
+    table.dataTable thead td.select-checkbox:before,
+    table.dataTable thead td.select-checkbox:after,
+    table.dataTable thead th.select-checkbox:before,
+    table.dataTable thead th.select-checkbox:after {
+        display: block;
+        position: absolute;
+        top: 1.2em;
+        left: 50%;
+        width: 12px;
+        height: 12px;
+        box-sizing: border-box;
+    }
+    table.dataTable thead td.select-checkbox:before,
+    table.dataTable thead th.select-checkbox:before,
+    table.dataTable tbody td.select-checkbox:before,
+    table.dataTable tbody th.select-checkbox:before{
+        content: ' ';
+        margin-top: -3px;
+        margin-left: -5px;
+        border: 1px solid #444;
+        border-radius: 3px;
+    }
+    table.dataTable thead th.selected.select-checkbox:after{
+        content: '\2714';
+        margin-top: -11px;
+        margin-left: -4px;
+        text-align: center;
+        text-shadow: 1px 1px #B0BED9, -1px -1px #B0BED9, 1px -1px #B0BED9, -1px 1px #B0BED9;
+    }
+    table.dataTable tr.selected td.select-checkbox:after,
+    table.dataTable tr.selected th.select-checkbox:after,
+    table.dataTable thead th.selected.select-checkbox:after{
+        text-shadow: none;
+    }
+
+/*
+ * 低版本IE兼容样式
+ * mag
+*/
+.leftpanelBg{display: none}
+@media \0screen\,screen\9{.menutoggle { display: none; }} /*IE6～8 hack*/
+.headerbar{
+    height: 50px !important;\0;    /*for IE8/IE9/10*/
+    height: inherit\9;
+    +height: 50px !important;     /*for ie6/7*/
+}
+
+@media \0screen\,screen\9{
+a.showHtmlBtn {
+    color: #fff;
+    background-color:#ccc !important;
+}
+.leftpanelBg{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    width: 240px;
+    background-color: #428bca;
+    content: '';
+    z-index: -1;
+    left: 0;
+    display: inline-block;
+}
+.fixed .leftpanelBg {
+    left: auto !important;
+}
+.leftpanel:after {
+    width: 0px !important;
+    margin-top:50px !important;
+}
+.headermenu .dropdown-toggle {
+    background: none;
+    color: #fff;
+}
+.form-control{
+	height:33px !important;
+	border-radius: 3px;
+	position:relative;
+	z-index:2;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.panel{
+	border-radius: 3px;
+	position:relative;
+	z-index:2;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.ckbox label:before ,.rdio label:before {
+    border: 0px;
+}
+.btn {
+    border-radius: 3px;
+    position:relative;
+	z-index:2;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+
+.modal-content {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 0px;
+    border-radius: 6px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+    outline: 0 none;
+    position: relative;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.gritter-item-wrapper {
+	background: #3F3F3F;
+	-moz-border-radius: 3px;
+	-webkit-border-radius: 3px;
+	border-radius: 3px;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.growl-primary {
+	background: #428bca;
+}
+.growl-success {
+	background: #1CAF9A;
+}
+
+.growl-warning {
+	background: #F0AD4E;
+}
+
+.growl-danger {
+	background: #d9534f;
+}
+
+.growl-info {
+	background: #5bc0de;
+}
+.tooltip-inner {
+    border-radius: 2px;
+	position:relative;
+	z-index:2;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.popover {
+    border-radius: 2px;
+    box-shadow: 0px;
+    behavior: url(../../static/js/pie/PIE.htc);
+}
+.ui-slider {
+    background: #E6E6E6;
+    border-radius: 3px;
+	position:relative;
+	z-index:2;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.ui-slider .ui-slider-range {
+    border-radius: 3px;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.ui-slider .ui-slider-handle {
+    border-radius: 50px;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.4);
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.pagination-split li a , .nav-pills > li > a {
+    border-radius: 3px;
+	behavior: url(../../static/js/pie/PIE.htc);
+}
+.pager li > a, .pager li > span {
+    border-radius: 3px;
+    behavior: url(../../static/js/pie/PIE.htc);
+}
+.label ,.badge {
+    border-radius: 2px;
+    behavior: url(../../static/js/pie/PIE.htc);
+}
+.modal-footer .btn {
+    margin-left: 5px;
+}
+.ancs-select-multiple{
+    font-size:13px;
+    height:auto !important;
+}
+/*IE8下左侧不做响应式隐藏*/
+    @media screen and (max-width: 1024px) {
+
+        body {
+            position: static;
+        }
+
+        .leftpanel {
+            display: block;
+        }
+
+        .mainpanel {
+            margin-left: 240px;
+            width: 100%;
+        }
+
+        .leftpanel-collapsed .leftpanel {
+            display: block;
+        }
+
+        .leftpanel-collapsed .mainpanel {
+            margin-left: 240px;
+        }
+
+        .leftpanel-collapsed .headerbar {
+            margin-left: 240px;
+        }
+
+        .leftpanelinner {
+            padding: 0px;
+        }
+
+        .leftpanelinner .searchform input {
+            background: #fff;
+            border: 0;
+        }
+
+        /* horizontal menu related */
+        .nav-horizontal {
+            position: relative;
+        }
+
+        .horizontal-menu .menutoggle {
+            display: none;
+        }
+
+        .horizontal-menu .headerbar .logopanel {
+            display: block;
+        }
+
+        .nav-horizontal .caret {
+            display: inline-block;
+        }
+
+        .horizontal-menu .header-left,
+        .horizontal-menu .topnav {
+            float: left;
+        }
+
+        .horizontal-menu-sidebar .header-left,
+        .horizontal-menu-sidebar .topnav {
+            float: none;
+        }
+
+        .fixed-noleft .menutoggle {
+            display: none;
+        }
+
+        .fixed-noleft .headerbar .logopanel {
+            display: block;
+        }
+
+        .fixed-noleft .header-left,
+        .fixed-noleft .topnav {
+            float: none;
+        }
+
+    }
+
+    @media screen and (max-width: 767px) {
+
+        .searchform {
+            position: static;
+        }
+
+        .leftpanel .searchform,
+        .leftpanel .userlogged {
+            display: none;
+        }
+
+        .breadcrumb-wrapper {
+            display: block;
+        }
+
+        .headermenu .dropdown-menu:after {
+            display: block;
+        }
+
+    }
+
+} /*IE6～8 hack*/
+

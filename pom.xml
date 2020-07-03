@@ -16,6 +16,24 @@
     <artifactId>springboot-mq</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <properties>
+        <version.hutool>4.6.10</version.hutool>
+    </properties>
+
+    <dependencies>
+        <!-- hutool 工具包 -->
+        <dependency>
+            <groupId>cn.hutool</groupId>
+            <artifactId>hutool-all</artifactId>
+            <version>${version.hutool}</version>
+        </dependency>
+        <dependency>
+            <groupId>commons-lang</groupId>
+            <artifactId>commons-lang</artifactId>
+            <version>2.4</version>
+        </dependency>
+    </dependencies>
+
     <modules>
         <module>provider</module>
         <module>consumer</module>
@@ -23,6 +41,7 @@
         <module>kafka-provider</module>
         <module>common</module>
         <module>kafka-consumer</module>
+        <module>websocket-server</module>
     </modules>
 
 </project>

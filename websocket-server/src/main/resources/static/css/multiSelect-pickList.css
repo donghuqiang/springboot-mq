@@ -1,0 +1,65 @@
+.pickList .pickListButtons {
+    padding: 20px 10px;
+    text-align: center;
+}
+.pickList .settingUp-btns {
+    padding: 20px 5px;
+    text-align: left;
+}
+
+.pickList .pickListButtons button , .pickList .settingUp-btns button{
+    margin-bottom: 5px;
+}
+
+.pickList .pickListSelect {
+    /*height: 300px !important;*/
+	height: 150px !important;
+}
+
+.pickList .pickListSelect .btn-box {
+    margin-top: 90px;
+    padding: 0;
+    float: left
+}
+
+.pickList .pickListSelect .settingUp-btns {
+    position: absolute;
+    right: 4px;
+    margin-top: 90px;
+    width: 40px
+}
+
+.pickList .settingUp-btns .upBtn {
+    margin-bottom: 5px
+}
+
+.pickList .btn-box .btn {
+    margin: 2px;
+    padding: 4px 0;
+    color: #ddd;
+    width: 100%;
+    background-color: #fff;
+}
+
+.pickList .settingUp-btns .btn {
+    color: #ddd;
+    background-color: #fff;
+}
+
+.pickList .btn-box .btn:hover, .pickList .btn-box .btn:focus, .pickList .settingUp-btns .btn:hover, .pickList .settingUp-btns .btn:focus {
+    color: #fff;
+    background-color: #3e99ff;
+    border-color: transparent
+}
+
+.pickList .db-btn {
+    color: #3e99ff;
+    padding: 4px 12px;
+    background-color: #fff;
+    border-color: #ddd;
+    border-radius: 0
+}
+
+.pickList .btn>.fa {
+    margin-right: 5px
+}

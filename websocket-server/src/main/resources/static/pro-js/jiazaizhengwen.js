@@ -1,0 +1,17 @@
+document.write('<object id="TANGER_OCX" classid="clsid:C9BC4DFF-4248-4a3c-8A49-63A7D317F404" ');
+document.write(' codebase="OfficeControl.cab#version=4,0,0,8"  width="100%" height="100%"> ');
+document.write('<param name="BorderStyle" value="1"> ');
+document.write('<param name="BorderColor" value="14402205"> ');
+document.write('<param name="TitlebarColor" value="15658734"> ');
+document.write('<param name="TitlebarTextColor" value="0"> ');
+document.write('<param name="Caption" value=""> ');
+document.write('<param name="MakerCaption" value="北京神舟航天软件技术有限公司"> ');
+document.write('<param name="MakerKey" value="5E4E4AC6C9566A1F756FCD65D23A0123032FC7C1"> ');
+document.write('<param name="ProductCaption" value="正式版本"> ');
+document.write('<param name="ProductKey" value="4B75EE73C965EDD10D7C18336284B25A94B156B5"> ');
+document.write('<param name="IsShowToolMenu" value=" 0"> ');
+document.write('<param name="MaxUploadSize" value="30000000"> ');
+document.write('<param name="CustomMenuCaption1" value="我的菜单"> ');
+document.write('<param name="MenubarColor" value="14402205"> ');
+document.write('<SPAN STYLE="color:red">不能装载文档控件。请在检查浏览器的选项中检查浏览器的安全设置。</SPAN> ');
+document.write('</object> ');

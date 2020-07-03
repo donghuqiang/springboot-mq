@@ -8,7 +8,7 @@ import java.util.Optional;
 
 @Component
 public class Consumer {
-    @KafkaListener(topics = "user")
+    @KafkaListener(topics = "topic-bjsasc-uims-iam")
     public void consumer(ConsumerRecord consumerRecord){
         Optional<Object> kafkaMassage = Optional.ofNullable(consumerRecord.value());
         if(kafkaMassage.isPresent()){

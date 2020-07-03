@@ -1,0 +1,61 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jquery uploadify</title>
+<link rel="stylesheet" type="text/css" href="uploadify.css">
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="jquery.uploadify.min.js"></script>
+
+<script type="text/javascript">
+$(function() {
+	$('#file_upload').uploadify({
+            //Flash文件
+			'swf':'uploadify.swf',
+            //处理上传文件的服务类
+			'uploader':'uploadify',
+            //选择文件后自动上传
+            'auto': true
+			//按钮额外自己添加点的样式类.upload
+//			'buttonClass':'upload',
+//			//限制文件上传大小
+//			'fileSizeLimit':'2MB',
+//			//文件选择框显示
+//			'fileTypeDesc': '选择图片',
+//			//文件类型过滤
+//			'fileTypeExts' : '*.jpg;*.png',
+//			//按钮高度
+//			'height':'30',
+//			//按钮宽度
+//			'width':'100',
+//			//请求类型
+//			'method':'post',
+//			//是否支持多文件上传
+//			'multi': true,
+//			//需要重写的事件
+//			'overrideEvents':['onDialogClose','onSelectError','onUploadError'],
+//			//队列ID，用来显示文件上传队列与进度
+//			'queueID':'photo_queue',
+//			//上传文件个数限制
+//			'uploadLimit':10,
+//			//上传按钮内容显示文本
+//			'buttonText':'图片上传',
+//			//自定义重写的方法，文件上传错误触发
+//			'onUploadError':'',
+//			//文件选择错误触发
+//			'onSelectError':'',
+//			//文件队列上传完毕触发
+//			'onQueueComplete':'',
+//			//队列开始上传触发
+//			'onUploadStart':'',
+//			//单个文件上传成功触发
+//			'onUploadSuccess':function(file, data, response){}
+	});
+});
+</script>
+</head>
+
+<body>
+<input type="file" name="file_upload" id="file_upload" style="display: none">
+</body>
+</html>

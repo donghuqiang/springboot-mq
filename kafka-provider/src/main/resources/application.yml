@@ -17,4 +17,4 @@ spring:
       value-serializer: org.apache.kafka.common.serialization.StringSerializer
       acks: 0
     # 指定kafka 代理地址，可以多个
-    bootstrap-servers: localhost:9092
+    bootstrap-servers: 10.0.33.180:9092

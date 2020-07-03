@@ -17,11 +17,13 @@ spring:
       Name: user #自定义topic名称
       numPartitions: 2  #自定义分区
       replicationFactor: 2 #自定义副本
+    listener:
+      missing-topics-fatal: false
     consumer:
       # 指定默认消费者group id
-      group-id: group.1
+      group-id: hr
       #earliest
-      auto-offset-reset: latest
+      auto-offset-reset: earliest
       enable-auto-commit: true
       auto-commit-interval: 20000
       # 指定消息key和消息体的编解码方式

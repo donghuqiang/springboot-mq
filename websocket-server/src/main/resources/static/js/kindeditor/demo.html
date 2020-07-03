@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>kindeditor</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="themes/default/default.css" />
+    <script src="../../../static/js/jquery-1.11.1.min.js"></script>
+    <script src="kindeditor-all-min.js"></script>
+    <script src="lang/zh-CN.js"></script>
+
+</head>
+<body>
+<form>
+    <textarea name="content" style="width:700px;height:200px;visibility:hidden;">KindEditor</textarea>
+</form>
+<button id="setHtml">插入HTML</button>
+<button id="getHtml">获取HTML</button>
+<button id="getText">获取纯文本</button>
+
+<script>
+    var editor;
+    KindEditor.ready(function(K) {
+        editor = K.create('textarea[name="content"]', {
+            resizeType : 0,
+            width:800,
+            height:400,
+            items : [
+                'fontname', 'fontsize', '|', 'forecolor', 'hilitecolor', 'bold', 'italic', 'underline',
+                'removeformat', '|', 'justifyleft', 'justifycenter', 'justifyright', 'insertorderedlist',
+                'insertunorderedlist']
+        });
+    });
+    //插入HTML
+    $("#setHtml").on("click",function (e) {
+        var html = "<div style='color;red;font-size:80px'>插入的html</div>";
+        editor.html(html);
+    });
+    //获取HTML
+    $("#getHtml").on("click",function (e) {
+        var html = editor.html();
+        alert(html);
+    });
+    //获取纯文本
+    $("#getText").on("click",function (e) {
+        var text = editor.text();
+        alert(text);
+    });
+</script>
+
+</body>
+</html>

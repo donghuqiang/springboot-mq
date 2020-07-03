@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>websocket</title>
+    <link href="/js/My97DatePicker/skin/twoer/datepicker.css" rel="stylesheet"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/style.default.css" rel="stylesheet"/>
+    <link href="/css/style.bluenav.css" rel="stylesheet"/>
+    <link href="/css/ancs-custom.css" rel="stylesheet"/>
+    <link href="/pro-css/custom.css" rel="stylesheet"/>
+    <!--自定义style-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+<div>
+
+    <section style="width: 1200px; margin: 0 auto">
+
+        <div class="pageheader">
+            <h2><i class="glyphicon glyphicon-list glyphicon-noborder"></i>当前位置：Websocket测试</h2>
+        </div>
+
+        <div class="form-inline mb5">
+            <button class="btn btn-primary btn-sm saveBtn" type="button" onclick="openSocket()">开启socket
+            </button>
+            <button class="btn btn-primary btn-sm saveBtn" type="button" onclick="serverSendMsg()">发送消息
+            </button>
+        </div>
+
+        <div class="contentpanel">
+            <input type="hidden" id="webSocketUrl" th:value="${webSocketUrl}">
+            <table class="table table-bordered ancs-table fawen-table" width="100%" border="0" cellspacing="0"
+                   cellpadding="0">
+
+                <tr>
+                    <td width="150" class="text-right">【userId】：</td>
+                    <td width="">
+                        <input id="userId" name="userId" type="text" value="10">
+                    </td>
+
+                </tr>
+
+                <tr>
+                    <td width="150" class="text-right">【toUserId】：</td>
+                    <td width="">
+                        <input id="toUserId" name="toUserId" type="text" value="20">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td width="150" class="text-right">【toUserId】：</td>
+                    <td width="">
+                        <input id="contentText" name="contentText" type="text" value="hello websocket">
+                    </td>
+                </tr>
+
+            </table>
+        </div>
+
+    </section>
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.2.1.min.js"></script><!--JQUERY向前兼容-->
+    <script src="/js/jquery-ui-1.10.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.cookies.js"></script>
+    <script src="/pro-js/custom.js"></script>
+    <script src="/pro-js/ancs-utils.js"></script>
+    <script src="/pro-js/jquery.utils.js"></script>
+    <script src="/page-js/index.js"></script>
+</div>
+</body>
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="renderer" content="webkit"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+    <meta name="description" content=""/>
+    <meta name="author" content=""/>
+    <title>防篡改验证</title>
+    <link rel="shortcut icon" href="/images/favicon.ico"/>
+    <link href="/js/My97DatePicker/skin/twoer/datepicker.css" rel="stylesheet"/>
+    <link href="/css/bootstrap.min.css" rel="stylesheet"/>
+    <link href="/css/style.default.css" rel="stylesheet"/>
+    <link href="/css/style.bluenav.css" rel="stylesheet"/>
+    <link href="/css/ancs-custom.css" rel="stylesheet"/>
+    <link href="/pro-css/custom.css" rel="stylesheet"/>
+    <!--自定义style-->
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="/js/html5shiv.js"></script>
+    <script src="/js/respond.min.js"></script>
+
+    <![endif]-->
+</head>
+<body>
+<div>
+
+    <section style="width: 830px;margin: auto;">
+        <div class="pageheader">
+            <h2><i class="glyphicon glyphicon-list glyphicon-noborder"></i>当前位置：编辑</h2>
+        </div>
+        <div class="contentpanel">
+            <div class="form-inline mb5">
+                <button id="btn_save" class="btn btn-primary btn-sm saveBtn" type="button" onclick="save()">保存
+                </button>
+            </div>
+
+            <h3 id="info_h3" th:text="${flag}?'':'标题已修改，原值：'+${old}" style="color: red;margin-top: 0px; text-align: center;font-family: 宋体; font-weight: bold"></h3>
+            <form id="infoForm" method="post" enctype="multipart/form-data">
+
+                <div class="panel panel-default">
+
+                    <input type="hidden" id="txt_id" name="id" th:value="${entity.id}">
+                    <div class="panel-body panel-body-nopadding padding10" style="background: #fcfcfc;">
+                        <table class="table table-bordered ancs-table fawen-table" width="100%" border="0" cellspacing="0"
+                               cellpadding="0">
+
+                            <tr>
+                                <td width="120" class="text-right">标题：</td>
+                                <td width="160">
+                                    <input name="title" type="text"
+                                           th:value="${entity.title}" class="form-control input-sm ancs-input-sm"/>
+                                </td>
+
+                            </tr>
+
+                            <tr>
+                                <td width="120" class="text-right">创建人：</td>
+                                <td width="">
+                                    <input type="text" name="createuser" th:value="${entity.createuser}"
+                                           class="form-control input-sm ancs-input-sm">
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td width="120" class="text-right">备注：</td>
+                                <td width="">
+                                    <input type="text" name="remark" th:value="${entity.remark}"
+                                           class="form-control input-sm ancs-input-sm">
+                                </td>
+                            </tr>
+
+                        </table>
+
+                    </div>
+                </div>
+            </form>
+
+            <br>
+            <br>
+        </div>
+    </section>
+    <script src="/js/jquery-1.11.1.min.js"></script>
+    <script src="/js/jquery-migrate-1.2.1.min.js"></script><!--JQUERY向前兼容-->
+    <script src="/js/jquery-ui-1.10.3.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+    <script src="/js/jquery.cookies.js"></script>
+    <script src="/pro-js/custom.js"></script>
+    <script src="/pro-js/ancs-utils.js"></script>
+    <script src="/pro-js/jquery.utils.js"></script>
+    <script src="/page-js/edit.js"></script>
+</div>
+</body>
+</html>
